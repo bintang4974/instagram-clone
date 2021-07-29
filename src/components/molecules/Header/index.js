@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingHorizontal: 10
     },
     text: {
         fontWeight: 'bold',

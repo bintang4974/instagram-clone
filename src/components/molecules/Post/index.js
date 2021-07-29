@@ -22,20 +22,27 @@ const Post = () => {
                     source={{ uri: 'https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc29yc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80' }}
                     style={styles.postProfile}
                 />
-                <View style={styles.wrapperShare}>
-                    <View style={styles.wrapperIcon}>
-                        <IconHeart />
-                        <IconComment />
-                        <IconPaper />
+                <View style={styles.wrapperBottom}>
+                    <View style={styles.wrapperShare}>
+                        <View style={styles.wrapperIcon}>
+                            <IconHeart />
+                            <IconComment />
+                            <IconPaper />
+                        </View>
+                        <IconBookmark />
                     </View>
-                    <IconBookmark />
-                </View>
-                <Gap height={4} />
-                <View style={styles.like}>
-                    <Text>Liked by</Text>
-                    <Text style={styles.bold}>dark_emeralds</Text>
-                    <Text>and</Text>
-                    <Text style={styles.bold}>others</Text>
+                    <Gap height={4} />
+                    <View style={styles.like}>
+                        <Text>Liked by</Text>
+                        <Text style={styles.bold}>dark_emeralds</Text>
+                        <Text>and</Text>
+                        <Text style={styles.bold}>others</Text>
+                    </View>
+                    <Gap height={4} />
+                    <View style={styles.desc}>
+                        <Text style={styles.bold}>Anugerah</Text>
+                        <Text> Like this feeling</Text>
+                    </View>
                 </View>
             </View>
         </View>
@@ -48,7 +55,9 @@ const styles = StyleSheet.create({
     wrapper: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingHorizontal: 10,
+        marginTop: 20
     },
     wrapperProfile: {
         flexDirection: 'row',
@@ -73,17 +82,23 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginTop: 4
     },
+    wrapperBottom: {
+        paddingHorizontal: 10
+    },
     wrapperShare: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 8
+        marginTop: 8,
     },
     like: {
         flexDirection: 'row',
         width: 220,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
     bold: {
         fontWeight: 'bold'
+    },
+    desc: {
+        flexDirection: 'row',
     }
 })
