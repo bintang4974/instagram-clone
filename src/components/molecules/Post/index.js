@@ -1,33 +1,39 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { IconBookmark, IconComment, IconDots, IconHeart, IconPaper } from '../../../assets';
 import { Gap } from '../../atoms';
 
-const Post = () => {
+const Post = ({ profile, name, post }) => {
     return (
-        <View>
+        <>
             <View style={styles.wrapper}>
                 <View style={styles.wrapperProfile}>
                     <Image
-                        source={{ uri: 'https://www.catleylakeman.co.uk/assets/img/CATLEY_LAKEMAN-Andy.jpg' }}
+                        source={{ uri: profile }}
                         style={styles.imageProfile}
                     />
-                    <Text style={styles.nameProfile}>Anugerah</Text>
+                    <Text style={styles.nameProfile}>{name}</Text>
                 </View>
                 <IconDots />
             </View>
             <Gap height={8} />
             <View>
                 <Image
-                    source={{ uri: 'https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc29yc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80' }}
+                    source={{ uri: post }}
                     style={styles.postProfile}
                 />
                 <View style={styles.wrapperBottom}>
                     <View style={styles.wrapperShare}>
                         <View style={styles.wrapperIcon}>
-                            <IconHeart />
-                            <IconComment />
-                            <IconPaper />
+                            <TouchableOpacity>
+                                <IconHeart />
+                            </TouchableOpacity>
+                            <TouchableOpacity>
+                                <IconComment />
+                            </TouchableOpacity>
+                            <TouchableOpacity>
+                                <IconPaper />
+                            </TouchableOpacity>
                         </View>
                         <IconBookmark />
                     </View>
@@ -43,9 +49,11 @@ const Post = () => {
                         <Text style={styles.bold}>Anugerah</Text>
                         <Text> Like this feeling</Text>
                     </View>
+                    <Gap height={3} />
+                    <Text style={styles.comment}>Tampilkan semua 200 komentar</Text>
                 </View>
             </View>
-        </View>
+        </>
     )
 }
 
@@ -100,5 +108,8 @@ const styles = StyleSheet.create({
     },
     desc: {
         flexDirection: 'row',
+    },
+    comment: {
+        fontWeight: '100'
     }
 })

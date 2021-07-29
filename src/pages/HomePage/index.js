@@ -8,7 +8,7 @@ const HomePage = () => {
             <Header />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.wrapper}>
-                    <Gap height={20} />
+                    <Gap height={12} />
                     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                         <View style={styles.wrapperStory}>
                             <Story image="https://qph.fs.quoracdn.net/main-qimg-7fb93146f5e4e470f5a590d2fc38be3b"
@@ -37,9 +37,18 @@ const HomePage = () => {
                 </View>
                 <Gap height={10} />
                 <View style={styles.post}>
-                    <Post />
-                    <Post />
+                    <Post
+                        profile="https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg"
+                        name="David Cahya"
+                        post="https://images.unsplash.com/photo-1457449940276-e8deed18bfff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                    />
+                    <Post
+                        profile="https://bestprofilepictures.com/wp-content/uploads/2020/06/Anonymous-Profile-Picture-1024x1024.jpg"
+                        name="Abidin"
+                        post="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                    />
                 </View>
+                <Gap height={40} />
             </ScrollView>
         </View>
     )
